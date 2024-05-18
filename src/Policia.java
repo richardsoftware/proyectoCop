@@ -36,8 +36,9 @@ public class Policia {
     }
 
     // metodo toString():String
-    public String toString() {
-        return apellido.toString();
-    }
 
+    @Override
+    public String toString() {
+        return  "Nombre: " + nombre + " Apellido: " + apellido + " Legajo: " + legajo;
+    }
 }

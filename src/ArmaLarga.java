@@ -1,4 +1,4 @@
-public class ArmaLarga extends Arma {
+public class ArmaLarga extends Arma implements IComparable {
 
     private String justifUso;
     private int nivelArma;
@@ -10,14 +10,16 @@ public class ArmaLarga extends Arma {
         this.nivelArma = nivelArma;//1 al 5
         this.tieneSello = tieneSello;
     }
-    //Comparacion de dos armas largas. Es mayor la de mayor nivel
-    // compareTo toString
-    public boolean esMayorQue(ArmaLarga otraArma) {
-        return this.nivelArma > otraArma.getNivel();
-    }
-    //Getters y Setters
-
-    public int getNivel() {
+    public int getNivelArma()
+    {
         return nivelArma;
     }
+    //Comparacion de dos armas largas. Es mayor la de mayor nivel (1-5).
+    // compareTo toString
+
+    //@Override
+    public boolean esMayorQue(ArmaLarga otra) {
+        return this.nivelArma > otra.nivelArma;
+    }
+
 }

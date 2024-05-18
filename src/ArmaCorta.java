@@ -5,6 +5,7 @@ public class ArmaCorta extends Arma {
         super(policiaAsignado, cantMuniciones, alcance, marca, calibre, estado);
         this.esAutomatica = esAutomatica;
     }
+
     //Metodo alcance del Arma mayor a 200m.
     public boolean efectividadMts() {
         return getAlcance() > 200;

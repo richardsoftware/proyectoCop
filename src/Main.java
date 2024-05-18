@@ -14,16 +14,34 @@ public class Main {
         ArmaCorta armaCorta1 = new ArmaCorta(policia1, 15, 70.50, "Glock", 9, "EN USO", true);
         ArmaCorta armaCorta2 = new ArmaCorta(policia2, 12, 250.25, "Matagato", 22, "EN MANTENIMIENTO", true);
         ArmaLarga armaLarga1 = new ArmaLarga(policia3, 30, 300.00, "Remington", 38, "NUEVA", "Uso para patrullaje rural", 4 , true);
-        ArmaLarga armaLarga2 = new ArmaLarga(policia4, 25, 500.00, "M16", 9, "EN USO", "Uso para situaciones de alta peligrosidad", 3, false);
+        ArmaLarga armaLarga2 = new ArmaLarga(policia4, 25, 500.00, "M16", 9, "EN USO", "Uso para situaciones de alta peligrosidad", 5, false);
 
 
         System.out.println("Programa Policia Prueba");
 
 
-        System.out.println("¿El arma corta 1 puede disparar a más de 200m? " + armaCorta1.efectividadMts());
-        System.out.println("¿El arma corta 2 puede disparar a más de 200m? " + armaCorta2.efectividadMts());
-        System.out.println("¿El arma larga 1 es mayor que el arma larga 2? " + armaLarga1.esMayorQue(armaLarga2));
-        System.out.println("¿El arma larga 2 está en condiciones para ser usada? " + armaLarga2.enCondicion());
+        System.out.println(policia1);
+        System.out.println(policia2);
+        System.out.println(policia3);
+        System.out.println(policia4);
+        System.out.println("");
 
+        System.out.println(armaCorta1);
+        System.out.println(armaCorta2);
+        System.out.println("");
+
+        System.out.println(armaLarga1);
+        System.out.println(armaLarga2);
+        System.out.println("");
+
+        System.out.println("¿El arma " + armaCorta1 + " puede disparar a más de 200m? " + armaCorta1.efectividadMts());
+        System.out.println("¿El arma  " + armaCorta2 + " puede disparar a más de 200m? " + armaCorta2.efectividadMts());
+        System.out.println("¿El arma " + armaLarga2 + " esta en condiciones de ser usada:? " + armaLarga2.enCondicion());
+
+       if (armaLarga1.esMayorQue(armaLarga2)) {
+            System.out.println("El arma larga 1 es mayor que el arma larga 2.");
+        } else {
+            System.out.println("El arma larga 2 es mayor que el arma larga 1.");
+        }
     }
 }

@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface IComparable {
+public interface IComparable {
+    boolean esMayorQue(ArmaLarga otra);
 }
